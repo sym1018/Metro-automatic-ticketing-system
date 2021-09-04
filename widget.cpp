@@ -1,0 +1,2089 @@
+﻿#include "widget.h"
+#include "ui_widget.h"
+#include <QDebug>
+#include <QtGui>
+
+Widget::Widget(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::Widget)
+{
+
+    ui->setupUi(this);
+    this->setWindowIcon(QIcon(":4.png"));
+    this->setWindowTitle("都可以组");
+}
+
+Widget::~Widget()
+{
+    delete ui;
+}
+void Widget::on_pushButton_89_clicked()
+{/*苏州街*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=0;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=0;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+
+void Widget::on_pushButton_88_clicked()
+{/*知春里*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=1;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=1;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_41_clicked()
+{/*知春路--->宋家庄  知春路--->立水桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=2;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=6;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=2;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=6;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+
+void Widget::on_pushButton_87_clicked()
+{/*西土城*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=3;
+        KaiGuan::station_start=2;
+        KaiGuan::station_rear=6;
+        KaiGuan::station_location=5;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=3;
+        KaiGuan::station_starte=2;
+        KaiGuan::station_reare=6;
+        KaiGuan::station_locatione=5;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_86_clicked()
+{/*牡丹园*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=4;
+        KaiGuan::station_start=2;
+        KaiGuan::station_rear=6;
+        KaiGuan::station_location=4;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=4;
+        KaiGuan::station_starte=2;
+        KaiGuan::station_reare=6;
+        KaiGuan::station_locatione=4;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_85_clicked()
+{/*健德门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=5;
+        KaiGuan::station_start=2;
+        KaiGuan::station_rear=6;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=5;
+        KaiGuan::station_starte=2;
+        KaiGuan::station_reare=6;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_84_clicked()
+{/*北土城*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=6;
+        KaiGuan::station_start=2;
+        KaiGuan::station_rear=6;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=6;
+        KaiGuan::station_starte=2;
+        KaiGuan::station_reare=6;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_83_clicked()
+{/*安贞门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=7;
+        KaiGuan::station_start=2;
+        KaiGuan::station_rear=6;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=7;
+        KaiGuan::station_starte=2;
+        KaiGuan::station_reare=6;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_18_clicked()
+{/*惠新西街南口--->知春路  惠新西街南口--->雍和宫*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=8;
+        KaiGuan::station_start=2;
+        KaiGuan::station_rear=2;
+        KaiGuan::station_locatione=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=8;
+        KaiGuan::station_starte=2;
+        KaiGuan::station_reare=2;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_51_clicked()
+{/*芍药居->。。。*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=9;
+        KaiGuan::station_start=9;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=9;
+        KaiGuan::station_starte=9;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_57_clicked()
+{/*太阳宫*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=10;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=14;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=10;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=14;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_58_clicked()
+{/*三元桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=11;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=13;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=11;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=13;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_59_clicked()
+{/*亮马桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=12;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=12;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=12;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=12;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_60_clicked()
+{/*农业展览馆*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=13;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=11;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=13;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=11;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_61_clicked()
+{/*团结湖*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=14;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=10;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=14;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=10;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_62_clicked()
+{/*呼家楼*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=15;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=9;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=15;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=9;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_63_clicked()
+{/*金台夕照*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=16;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=8;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=16;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=8;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_64_clicked()
+{/*国贸*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=17;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=7;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=17;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=7;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_65_clicked()
+{/*双井*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=18;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=6;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=18;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=6;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_66_clicked()
+{/*劲松*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=19;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=5;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=19;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=5;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_67_clicked()
+{/*潘家园*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=20;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=4;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=20;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=4;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_68_clicked()
+{/*十里河*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=21;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=21;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_69_clicked()
+{/*分钟寺*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=22;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=22;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_70_clicked()
+{/*成寿寺*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=23;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=23;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_29_clicked()
+{/*宋家庄--->芍药居*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=24;
+        KaiGuan::station_start=5;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=24;
+        KaiGuan::station_starte=5;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_71_clicked()
+{/*石榴庄*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=25;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=19;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=25;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=19;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_72_clicked()
+{/*大红门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=26;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=18;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=26;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=18;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_73_clicked()
+{/*角门东*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=27;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=17;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=27;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=17;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_74_clicked()
+{/*角门西*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=28;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=16;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=28;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=16;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_75_clicked()
+{/*草桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=29;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=15;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=29;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=15;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_76_clicked()
+{/*丰台站*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=30;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=14;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=30;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=14;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_77_clicked()
+{/*泥洼*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=31;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=13;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=31;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=13;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_78_clicked()
+{/*西局*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=32;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=12;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=32;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=12;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_79_clicked()
+{/*六里桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=33;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=11;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=33;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=11;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_80_clicked()
+{/*莲花桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=34;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=10;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=34;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=10;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_81_clicked()
+{/*公主坟*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=35;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=9;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=35;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=9;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_82_clicked()
+{/*西钓鱼台*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=36;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=8;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=36;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=8;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_94_clicked()
+{/*慈寿寺*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=37;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=7;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=37;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=7;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_93_clicked()
+{/*车道沟*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=38;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=6;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=38;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=6;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_92_clicked()
+{/*长春桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=39;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=5;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=39;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=5;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_91_clicked()
+{/*火器营*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=40;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=4;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=40;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=4;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_90_clicked()
+{/*巴沟*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=0;
+        KaiGuan::start2=41;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=0;
+        KaiGuan::end2=41;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_40_clicked()
+{/*大钟寺*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=0;
+        KaiGuan::station_start=7;
+        KaiGuan::station_rear=6;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=0;
+        KaiGuan::station_starte=7;
+        KaiGuan::station_reare=6;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_42_clicked()
+{/*五道口*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=2;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=2;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_43_clicked()
+{/*上地*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=3;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=3;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_44_clicked()
+{/*西二旗*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=4;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=4;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_45_clicked()
+{/*龙泽*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=5;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=4;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=5;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=4;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_46_clicked()
+{/*回龙观*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=6;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=5;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=6;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=5;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_47_clicked()
+{/*霍营*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=7;
+        KaiGuan::station_start=6;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=6;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=7;
+        KaiGuan::station_starte=6;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=6;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_14_clicked()
+{/*立水桥--->大屯路东  立水桥--->望京西  立水桥--->天通苑*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=8;
+        KaiGuan::station_start=0;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=8;
+        KaiGuan::station_starte=0;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_52_clicked()
+{/*北苑*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=9;
+        KaiGuan::station_start=0;
+        KaiGuan::station_rear=8;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=9;
+        KaiGuan::station_starte=0;
+        KaiGuan::station_reare=8;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_4_clicked()
+{/*望京西--->崔各庄*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=10;
+        KaiGuan::station_start=8;
+        KaiGuan::station_rear=8;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=10;
+        KaiGuan::station_starte=8;
+        KaiGuan::station_reare=8;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_50_clicked()
+{/*光熙门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=12;
+        KaiGuan::station_start=10;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=12;
+        KaiGuan::station_starte=10;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_49_clicked()
+{/*柳芳*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=1;
+        KaiGuan::start2=13;
+        KaiGuan::station_start=10;
+        KaiGuan::station_rear=9;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=1;
+        KaiGuan::end2=13;
+        KaiGuan::station_starte=10;
+        KaiGuan::station_reare=9;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_33_clicked()
+{/*西直门--->知春路*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=0;
+        KaiGuan::station_start=7;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=0;
+
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=0;
+        KaiGuan::station_starte=7;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_32_clicked()
+{/*积水潭*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=1;
+        KaiGuan::station_start=3;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=1;
+        KaiGuan::station_starte=3;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_31_clicked()
+{/*鼓楼大街*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=2;
+        KaiGuan::station_start=3;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=2;
+        KaiGuan::station_starte=3;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_30_clicked()
+{/*安定门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=3;
+        KaiGuan::station_start=3;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=3;
+        KaiGuan::station_starte=3;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_20_clicked()
+{/*雍和宫--->崇文门*  雍和宫--->西直门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=4;
+        KaiGuan::station_start=3;
+        KaiGuan::station_rear=3;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=4;
+        KaiGuan::station_starte=3;
+        KaiGuan::station_reare=3;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_48_clicked()
+{/*东直门--->芍药居*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=5;
+        KaiGuan::station_start=10;
+        KaiGuan::station_rear=10;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=5;
+        KaiGuan::station_starte=10;
+        KaiGuan::station_reare=10;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_53_clicked()
+{/*东四十条*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=6;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=10;
+        KaiGuan::station_location=4;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=6;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=10;
+        KaiGuan::station_locatione=4;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_54_clicked()
+{/*朝阳门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=7;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=10;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=7;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=10;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_55_clicked()
+{/*建国门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=8;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=10;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=8;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=10;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_56_clicked()
+{/*北京站*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=9;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=10;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=9;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=10;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_25_clicked()
+{/*崇文门--->宋家庄  崇文门--->西直门  崇文门--->东直门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=10;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=4;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=10;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=4;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_34_clicked()
+{/*前门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=11;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=11;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_35_clicked()
+{/*和平门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=12;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=12;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_36_clicked()
+{/*宣武门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=13;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=13;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_39_clicked()
+{/*长椿街*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=14;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=4;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=14;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=4;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_38_clicked()
+{/*复兴门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=15;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=5;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=15;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=5;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_37_clicked()
+{/*车公庄*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=2;
+        KaiGuan::start2=16;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=7;
+        KaiGuan::station_location=6;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=2;
+        KaiGuan::end2=16;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=7;
+        KaiGuan::station_locatione=6;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_9_clicked()
+{/*清华东路西->。。。*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=0;
+        KaiGuan::station_start=1;
+        KaiGuan::station_rear=1;
+        KaiGuan::station_location=5;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=0;
+        KaiGuan::station_starte=1;
+        KaiGuan::station_reare=1;
+        KaiGuan::station_locatione=5;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_8_clicked()
+{/*六道口*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=1;
+        KaiGuan::station_start=1;
+        KaiGuan::station_rear=1;
+        KaiGuan::station_location=4;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=1;
+        KaiGuan::station_starte=1;
+        KaiGuan::station_reare=1;
+        KaiGuan::station_locatione=4;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_7_clicked()
+{/*北沙滩*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=2;
+        KaiGuan::station_start=1;
+        KaiGuan::station_rear=1;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=2;
+        KaiGuan::station_starte=1;
+        KaiGuan::station_reare=1;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_6_clicked()
+{/*奥林匹克公园*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=3;
+        KaiGuan::station_start=1;
+        KaiGuan::station_rear=1;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=3;
+        KaiGuan::station_starte=1;
+        KaiGuan::station_reare=1;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_clicked()
+{/*安立路*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=4;
+        KaiGuan::station_start=1;
+        KaiGuan::station_rear=1;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=4;
+        KaiGuan::station_starte=1;
+        KaiGuan::station_reare=1;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_2_clicked()
+{/*大屯路东--->望京西  大屯路东--->清华东路西口*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=5;
+        KaiGuan::station_start=1;
+        KaiGuan::station_rear=1;
+        KaiGuan::station_location=0;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=5;
+        KaiGuan::station_starte=1;
+        KaiGuan::station_reare=1;
+        KaiGuan::station_locatione=0;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_3_clicked()
+{/*关庄*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=6;
+        KaiGuan::station_start=1;
+        KaiGuan::station_rear=8;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=6;
+        KaiGuan::station_starte=1;
+        KaiGuan::station_reare=8;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_5_clicked()
+{/*望京*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=8;
+        KaiGuan::station_start=8;
+        KaiGuan::station_rear=8;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=8;
+        KaiGuan::station_starte=8;
+        KaiGuan::station_reare=8;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_10_clicked()
+{/*望京东*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=9;
+        KaiGuan::station_start=8;
+        KaiGuan::station_rear=8;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=9;
+        KaiGuan::station_starte=8;
+        KaiGuan::station_reare=8;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_11_clicked()
+{/*崔各庄*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=3;
+        KaiGuan::start2=10;
+        KaiGuan::station_start=8;
+        KaiGuan::station_rear=8;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=3;
+        KaiGuan::end2=10;
+        KaiGuan::station_starte=8;
+        KaiGuan::station_reare=8;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_16_clicked()
+{/*天通苑*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=0;
+        KaiGuan::station_start=0;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=0;
+        KaiGuan::station_starte=0;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_15_clicked()
+{/*天通苑南*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=1;
+        KaiGuan::station_start=0;
+        KaiGuan::station_rear=0;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=1;
+        KaiGuan::station_starte=0;
+        KaiGuan::station_reare=0;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_13_clicked()
+{/*立水桥南*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=3;
+        KaiGuan::station_start=0;
+        KaiGuan::station_rear=1;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=3;
+        KaiGuan::station_starte=0;
+        KaiGuan::station_reare=1;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_12_clicked()
+{/*北苑路北*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=4;
+        KaiGuan::station_start=0;
+        KaiGuan::station_rear=1;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=4;
+        KaiGuan::station_starte=0;
+        KaiGuan::station_reare=1;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_19_clicked()
+{/*和平西桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=7;
+        KaiGuan::station_start=2;
+        KaiGuan::station_rear=3;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=7;
+        KaiGuan::station_starte=2;
+        KaiGuan::station_reare=3;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_17_clicked()
+{/*和平里北街*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=8;
+        KaiGuan::station_start=2;
+        KaiGuan::station_rear=3;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=8;
+        KaiGuan::station_starte=2;
+        KaiGuan::station_reare=3;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_21_clicked()
+{/*北新桥*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=10;
+        KaiGuan::station_start=3;
+        KaiGuan::station_rear=4;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=10;
+        KaiGuan::station_starte=3;
+        KaiGuan::station_reare=4;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_22_clicked()
+{/*东四*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=11;
+        KaiGuan::station_start=3;
+        KaiGuan::station_rear=4;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=11;
+        KaiGuan::station_starte=3;
+        KaiGuan::station_reare=4;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_23_clicked()
+{/*灯市口*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=12;
+        KaiGuan::station_start=3;
+        KaiGuan::station_rear=4;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=12;
+        KaiGuan::station_starte=3;
+        KaiGuan::station_reare=4;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_24_clicked()
+{/*东单*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=13;
+        KaiGuan::station_start=3;
+        KaiGuan::station_rear=4;
+        KaiGuan::station_location=4;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=13;
+        KaiGuan::station_starte=3;
+        KaiGuan::station_reare=4;
+        KaiGuan::station_locatione=4;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_26_clicked()
+{/*磁器口*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=15;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=1;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=15;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=1;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_27_clicked()
+{/*天坛东门*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=16;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=2;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=16;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=2;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
+
+void Widget::on_pushButton_28_clicked()
+{/*蒲黄榆*/
+    if(KaiGuan::cf==0){
+        KaiGuan::start1=4;
+        KaiGuan::start2=17;
+        KaiGuan::station_start=4;
+        KaiGuan::station_rear=5;
+        KaiGuan::station_location=3;
+        chufa.setFixedSize(450,300);
+        chufa.show();
+    }
+    else{
+        KaiGuan::end1=4;
+        KaiGuan::end2=17;
+        KaiGuan::station_starte=4;
+        KaiGuan::station_reare=5;
+        KaiGuan::station_locatione=3;
+        daoda.setFixedSize(450,300);
+        daoda.show();
+    }
+}
